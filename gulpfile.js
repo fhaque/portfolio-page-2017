@@ -1,4 +1,5 @@
 const gulp = require('gulp');
+const sourcemaps = require('gulp-sourcemaps');
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
 const babel = require('gulp-babel');
@@ -10,10 +11,12 @@ const reload = browserSync.reload;
 // task to compile sass
 gulp.task('styles', function() {
     return gulp .src('./dev/styles/**/*.scss')
+                .pipe(sourcemaps.init())
                 .pipe( sass().on('error', sass.logError) )
                 .pipe( concat('style.css') )
+                .pipe(sourcemaps.write('./') )
                 .pipe( gulp.dest('./public/styles/') )
-                .pipe(reload({stream: true}));;
+                .pipe(reload({stream: true}));
 });
 
 //convert JS to es2015
@@ -23,7 +26,7 @@ gulp.task('scripts', function() {
                     presets: ['es2015']
                 }))
                 .pipe( gulp.dest('./public/scripts/') )
-                .pipe(reload({stream: true}));;
+                .pipe(reload({stream: true}));
 });
 
 // move assets to public

@@ -1,0 +1,7 @@
+@function remCalc($value) {
+	@return $value / $htmlFontSize * 1rem;
+}
+
+@function pOfWrapper($value) {
+	@return ($value / $wrapperMaxWidth) * 100%;
+}
