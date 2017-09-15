@@ -26,11 +26,19 @@
 
     width: pOfWrapper(370px);
 
+    @include respond-to("medium") {
+        width: 40%;
+    }
+
     // padding: 110px 50px;
 }
 
 .portfolioItemInfo__content {
     width: 65%;
+
+    @include respond-to("medium") {
+        width: 80%;
+    }
 }
 
 
@@ -59,6 +67,11 @@
     line-height: remCalc(18px);
     font-weight: $medFontWeight;
     color: $portfolioItemHeadingColor;
+
+    @include respond-to("medium") {
+        margin-top: remCalc(15px);
+        margin-bottom: remCalc(16px);
+    }
 }
 
 .portfolioItemInfo__description {
@@ -72,6 +85,10 @@
     width: pOfWrapper(770px);
 
     background-color: black;
+
+    @include respond-to("medium") {
+        width: calc(60% - 30px); //30px: margin
+    }
 }
 
 .portfolioItemDisplay img {
