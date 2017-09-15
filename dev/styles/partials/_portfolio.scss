@@ -18,11 +18,19 @@
 
 .portfolioItemInfo {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    // flex-direction: column;
+    // justify-content: flex-end;
+
+    justify-content: center;
+    align-items: center;
 
     width: pOfWrapper(370px);
-    padding: 110px 50px;
+
+    // padding: 110px 50px;
+}
+
+.portfolioItemInfo__content {
+    width: 65%;
 }
 
 

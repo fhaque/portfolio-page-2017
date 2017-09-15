@@ -26,6 +26,10 @@ form.contactForm {
     font-weight: $heavyFontWeight;
 }
 
+form.contactForm .nl-submit-wrap {
+    margin-top: 30px;
+}
+
 .socialMediaIcons__list {
     display: flex;
     flex-wrap: wrap;
@@ -36,6 +40,10 @@ form.contactForm {
 
 .socialMediaIcons__item {
     margin: 5px;
+
+    &:first-child {
+        margin-left: 0px;
+    }
 }
 
 .socialMediaIcons__item--twitter {
@@ -62,11 +70,17 @@ form.contactForm {
     font-weight: $medFontWeight;
     color: $contentTextColor;
 
+    font-style: normal;
+
     &:last-child {
         margin-bottom: 0px;
     }
 
 }
+.contactInfoIcon {
+    margin-right: 20px;
+}
+
 
 .contactInfoIcon__shape {
     color: $contactIconShapeColor;
