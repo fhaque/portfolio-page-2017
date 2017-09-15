@@ -1,0 +1,72 @@
+
+.portfolioGallery__item {
+    margin-bottom: 30px;
+
+    &:last-child {
+        margin-bottom: 0px;
+    }
+}
+
+.portfolioGallery__item:nth-child(even) .portfolioItem {
+    flex-direction: row-reverse;
+}
+
+.portfolioItem {
+    display: flex;
+    justify-content: space-between;
+}
+
+.portfolioItemInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    width: pOfWrapper(370px);
+    padding: 110px 50px;
+}
+
+
+.portfolioGallery__item:nth-child(even) .portfolioItemInfo__content {
+    text-align: right;
+}
+
+
+.portfolioItemInfo {
+    border: 10px solid $primaryColor;
+}
+
+.portfolioItemInfo__link {
+    font-size: remCalc(13px);
+    font-weight: $lightFontWeight;
+    line-height: remCalc(13px);
+    letter-spacing: 0;
+    color: $portfolioIconColor;
+}
+
+.portfolioItemInfo__heading {
+    margin-top: remCalc(30px);
+    margin-bottom: remCalc(16px);
+
+    font-size: remCalc(18px);
+    line-height: remCalc(18px);
+    font-weight: $medFontWeight;
+    color: $portfolioItemHeadingColor;
+}
+
+.portfolioItemInfo__description {
+    font-size: remCalc(12px);
+    line-height: remCalc(24px);
+    font-weight: $lightFontWeight;
+    color: $portfolioItemTextColor;
+}
+
+.portfolioItemDisplay {
+    width: pOfWrapper(770px);
+
+    background-color: black;
+}
+
+.portfolioItemDisplay img {
+    display: block;
+    width: 100%;
+}

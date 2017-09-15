@@ -1,0 +1,79 @@
+.titleBar {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.titleBar__logo {
+    // width: remCalc(131px);
+    padding: 18px 32px;
+
+
+    text-align: center;
+
+    font-size: remCalc(19px);
+    font-weight: $medFontWeight;
+    letter-spacing: remCalc(6px);
+    line-height: remCalc(19px);
+    text-transform: uppercase;
+    color: $secondaryColor;
+    
+    background-color: $logoBackgroundColor;
+}
+
+.mainNav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: pOfWrapper(320px);
+    margin-right: 62px;
+}
+
+.mainNav__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mainNav__item a {
+    font-size: remCalc(12px);
+    font-weight: $heavyFontWeight;
+}
+
+.introduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    min-height: remCalc(586px);
+    padding-bottom: 156px;
+}
+
+.introduction__content {
+    width: pOfWrapper(560px);
+}
+
+.introduction__topHeading {
+    font-size: remCalc(60px);
+    font-weight: $heavyFontWeight;
+    line-height: remCalc(60px);
+
+    text-transform: uppercase;
+}
+
+.introduction__heading {
+    margin: 36px 0px;
+
+    font-size: remCalc(36px);
+    font-weight: $lightFontWeight;
+    line-height: remCalc(36px);
+    color: $primaryColor;
+}
+
+.introduction__description {
+    font-size: remCalc(16px);
+    font-weight: $lightFontWeight;
+    line-height: remCalc(30px);
+    color: $sectionTextColor;
+}
+    

@@ -1,13 +1,7 @@
 html {
     font-size: $htmlFontSize;
+    font-family: $primaryFont;
 }
-
-.wrapper {
-    width: 100%;
-    max-width: $wrapperMaxWidth;
-    margin: 0 auto;
-}
-
 
 h1, h2, h3, h4, h5, h6 {
     padding: 0;
@@ -24,4 +18,34 @@ ul {
 p {
     padding: 0;
     margin: 0;
+}
+
+a {
+    font-weight: $medFontWeight;
+    text-transform: uppercase;
+    color: $primaryColor;
+
+    text-decoration: none;
+
+    &:active {
+        color: $linkBlockColor;
+    }
+}
+
+.wrapper {
+    width: 100%;
+    max-width: $wrapperMaxWidth;
+    margin: 0 auto;
+}
+
+.pageSection {
+    padding-bottom: 180px;
+}
+
+.section__heading {
+    margin-bottom: 86px;
+    
+    font-size: remCalc(36px);
+    line-height: remCalc(36px);
+    font-weight: $lightFontWeight;
 }

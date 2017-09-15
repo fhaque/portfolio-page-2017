@@ -4,93 +4,14 @@
 @import 'partials/functions';
 @import 'partials/mixins';
 @import 'partials/global';
+@import 'partials/header';
+@import 'partials/portfolio';
+@import 'partials/about';
+@import 'partials/contact';
+@import 'partials/footer';
 @import 'partials/nlform';
 
 * {
     border: 1px solid red;
-}
-
-.titleBar {
-    display: flex;
-    justify-content: space-between;
-
-}
-
-.titleBar__logo {
-    width: remCalc(131px);
-}
-
-.mainNav__list {
-    display: flex;
-    
-}
-
-
-.portfolioGallery__item:nth-child(even) .portfolioItem {
-    flex-direction: row-reverse;
-}
-
-.portfolioItem {
-    display: flex;
-    justify-content: space-between;
-}
-
-
-
-.portfolioItemInfo {
-    position: relative;
-    width: pOfWrapper(370px);
-}
-
-.portfolioItemInfo__content {
-    position: absolute;
-    bottom: 0;
-}
-
-.portfolioItemDisplay {
-    width: pOfWrapper(770px);
-}
-
-.portfolioItemDisplay img {
-    display: block;
-    width: 100%;
-}
-
-
-.aboutInfo {
-    display: flex;
-    justify-content: space-between;
-}
-
-.aboutInfo__display {
-    width: pOfWrapper(570px);
-}
-
-.aboutInfo__display img {
-    display: block;
-    width: 100%;
-}
-
-.aboutInfo__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    // align-items: center;
-
-    width: pOfWrapper(520px);
-}
-
-.contactSection__container {
-    display: flex;
-    justify-content: center;
-} 
-
-.contactSection__formSubSection {
-    width: pOfWrapper(570px);
-}
-
-.footerNav__list {
-    display: flex;
-    justify-content: center;
 }
 
