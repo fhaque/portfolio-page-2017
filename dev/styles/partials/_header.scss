@@ -1,6 +1,18 @@
 .titleBar {
     display: flex;
     justify-content: space-between;
+    position: fixed;
+
+    z-index: $zFront;
+
+    width: 100%;
+
+    background-color: $secondaryColor;
+
+    @include respond-to("small") {
+        min-width: 290px;
+        
+    }
 
 }
 
@@ -25,20 +37,48 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: relative;
 
     width: 320px;
     margin-right: 62px;
 
+    
+
     @include respond-to("small-medium") {
-        align-items: flex-end;
-        position: fixed;
-
-        width: 30%;
-        right: 32px;
-
-        margin-right: 0;
+        // position: fixed;
+        margin-right: 38px;
+        width: 45%;
     }
+
+    @include respond-to("small") {
+        // position: fixed;
+        width: 10%;
+        margin-right: 15px;
+        
+    }
+}
+
+.mainNav__container {
+    // // display: flex;
+    // // flex-direction: column;
+    // // justify-content: center;
+    // position: relative;
+    @include respond-to("small") {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+    
+
+    // @include respond-to("small-medium") {
+    //     align-items: flex-end;
+    //     position: fixed;
+
+    //     width: 30%;
+    //     right: 32px;
+
+    //     margin-right: 0;
+    // }
 }
 
 .mainNav__hamburger {
@@ -49,17 +89,21 @@
 
     z-index: $zFront;
 
+    max-width: 44px;
     padding: 10px 14px;
 
+    text-align: center;
     font-size: remCalc(20px);
     line-height: remCalc(20px);
     font-weight: $medFontWeight;
     color: $secondaryColor;
     
     border: none;
+    outline: none;
     background-color: $primaryColor;
 
-    @include respond-to("small-medium") {
+
+    @include respond-to("small") {
         display: block;
         // position: fixed;
     }
@@ -69,24 +113,44 @@
     display: flex;
     justify-content: space-between;
 
-    @include respond-to("small-medium") {
-        // display: none;
+    @include respond-to("small") {
+        display: none;
         flex-direction: column;
-        // position: fixed;
+        position: absolute;
+        top: 50px;
+        right: 0;
 
-        margin-top: 10px;
+        // padding-top: 10px;
+        // padding-left: 20px;
+        // padding-right: 20px;
+
+        background-color: $secondaryColor;
     }
+
+
+
+    // @include respond-to("small-medium") {
+    //     // display: none;
+    //     flex-direction: column;
+    //     // position: fixed;
+
+    //     margin-top: 10px;
+    // }
 }
 
 .mainNav__list--open {
-    position: fixed;
+    display: block;
 }
 
+// .mainNav__list--open {
+//     position: fixed;
+// }
+
 .mainNav__item {
-    @include respond-to("small-medium") {
+    @include respond-to("small") {
         text-align: right;
 
-        margin-bottom: 10px;
+        padding: 10px 20px 10px 20px;
     }
 }
 

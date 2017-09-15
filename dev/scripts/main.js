@@ -209,5 +209,16 @@
         window.NLForm = NLForm;
     } )( window );
 
-
 var nlform = new NLForm( document.getElementById( 'nl-form' ) );
+
+$( function() {
+
+    const $burger = $('.mainNav__hamburger');
+    const $navList = $('.mainNav__list');
+
+    $burger.on('click', function() {
+        $navList.toggleClass('mainNav__list--open');
+    });
+
+
+});
