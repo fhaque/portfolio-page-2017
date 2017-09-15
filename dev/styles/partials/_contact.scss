@@ -5,4 +5,78 @@
 
 .contactSection__formSubSection {
     width: pOfWrapper(570px);
+    margin-right: 30px;
 }
+
+.contactSection__infoHeading {
+    margin-bottom: 30px;
+
+    font-size: remCalc(18px);
+    font-weight: $medFontWeight;
+    line-height: remCalc(18px);
+    text-transform: uppercase;
+    color: $contactHeadingColor;
+
+}
+
+form.contactForm {
+    margin: 0;
+    padding: 0;
+
+    font-weight: $heavyFontWeight;
+}
+
+.socialMediaIcons__list {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 100%;
+    margin-bottom: 56px;
+}
+
+.socialMediaIcons__item {
+    margin: 5px;
+}
+
+.socialMediaIcons__item--twitter {
+    background-color: #21aeff;
+}
+
+.socialMediaIcons__item--linkedin {
+    background-color: #0077b5;
+}
+
+.socialMediaIcons__item--github {
+    background-color: #3f3f3f;
+}
+
+.socialMediaIcon__shape {
+    color: transparent;
+}
+
+.contactInfo__item {
+    margin-bottom: 50px;
+
+    font-size: remCalc(13px);
+    line-height: remCalc(13px);
+    font-weight: $medFontWeight;
+    color: $contentTextColor;
+
+    &:last-child {
+        margin-bottom: 0px;
+    }
+
+}
+
+.contactInfoIcon__shape {
+    color: $contactIconShapeColor;
+}
+
+.contactInfoIcon__symbol {
+    //to latch onto FontAwesome stack,
+    //need to use before element.
+    &::before {
+        color: $contactIconSymbolColor;
+    }
+}
+

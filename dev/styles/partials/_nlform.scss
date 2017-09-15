@@ -51,6 +51,10 @@
 	position: relative;
 }
 
+.nl-field a {
+	text-transform: none;
+}
+
 .nl-field.nl-field-open {
 	z-index: 10000;
 }
@@ -61,16 +65,16 @@
 .nl-form select  {
 	line-height: inherit;
 	display: inline-block;
-	color: #b14943;
+	color: $formInputColor;//#b14943;
 	cursor: pointer;
-	border-bottom: 1px dashed #b14943;
+	border-bottom: 1px dashed $contentTextColor;// #b14943;
 }
 
 /* drop-down list / text element */
 .nl-field ul {
 	position: absolute;
 	visibility: hidden;
-	background: #76C3BD;
+	background: $formInputActiveColor;//#76C3BD;
 	left: -0.5em;
 	top: 50%;
 	font-size: 80%;
@@ -106,7 +110,7 @@
 }
 
 .nl-dd ul li.nl-dd-checked {
-	color: #478982;
+	color: $formInputActiveColor;//#478982;
 }
 
 .no-touch .nl-dd ul li:hover {
@@ -114,7 +118,7 @@
 }
 
 .no-touch .nl-dd ul li:hover:active {
-	color: #478982;
+	color: $formInputActiveColor;//#478982;
 }
 
 /* icons for some elements */
@@ -146,7 +150,7 @@
 	width: 100%;
 	padding: 0.2em 2em 0.2em 0.5em;
 	border-bottom: none;
-	color: #fff;
+	color: $formInputColor;//#fff;
 }
 
 .nl-form .nl-field-go {
@@ -164,7 +168,7 @@
 .nl-field-go:before {
 	content: "\e001";
 	font-size: 75%;
-	color: #fff;
+	color: $contactIconSymbolColor;//#fff;
 	width: 100%;
 	line-height: 2.5;
 	display: block;
@@ -172,30 +176,30 @@
 
 /* custom placeholder color */
 input::-webkit-input-placeholder {
-	color: rgba(255,255,255,0.8);
+	color: rgba($formInputColor, 0.8);//rgba(255,255,255,0.8);
 }
 
 input:active::-webkit-input-placeholder ,
 input:focus::-webkit-input-placeholder {
-	color: rgba(255,255,255,0.2);
+	color: rgba($formInputColor, 0.2);//rgba(255,255,255,0.2);
 }
 
 input::-moz-placeholder {
-	color: rgba(255,255,255,0.8);
+	color: rgba($formInputColor, 0.2);//rgba(255,255,255,0.8);
 }
 
 input:active::-moz-placeholder,
 input:focus::-moz-placeholder {
-	color: rgba(255,255,255,0.2);
+	color: rgba($formInputColor, 0.2);//rgba(255,255,255,0.2);
 }
 
 input:-ms-input-placeholder {  
-	color: rgba(255,255,255,0.8);
+	color: rgba($formInputColor, 0.8);//rgba(255,255,255,0.8);
 }
 
 input:active::-ms-input-placeholder ,
 input:focus::-ms-input-placeholder {
-	color: rgba(255,255,255,0.2);
+	color: rgba($formInputColor, 0.2);//rgba(255,255,255,0.2);
 }
 
 /* example field below text input */
@@ -209,7 +213,7 @@ input:focus::-ms-input-placeholder {
 }
 
 .nl-ti-text ul li.nl-ti-example em {
-	color: #fff
+	color: $formInputColor;//#fff
 }
 
 /* submit button */
@@ -218,34 +222,34 @@ input:focus::-ms-input-placeholder {
 }
 
 .nl-form .nl-submit {
-	line-height: 3;
+	// line-height: 3;
 	text-transform: uppercase;
 	cursor: pointer;
 	position: relative;
-	background: #76C3BD;
-	color: #fff;
-	padding: 0 1em 0 0;
+	background: $formBtnColor;//#76C3BD;
+	color: $formbtnTextColor;//#fff;
+	padding: 18px 30px;
 	font-size: 40%;
-	font-weight: bold;
-	letter-spacing: 3px;
+	// font-weight: bold;
+	// letter-spacing: 3px;
 }
 
-.nl-submit:before {
-	content: "\e001";
-	color: #fff;
-	float: left;
-	padding: 0 0.7em;
-	margin: 0 0.8em 0 0;
-	background: #69B1A9;
-}
+// .nl-submit:before {
+// 	content: "\e001";
+// 	color: $formbtnTextColor;//#fff;
+// 	float: left;
+// 	padding: 0 0.7em;
+// 	margin: 0 0.8em 0 0;
+// 	background: $formInputActiveColor;//#69B1A9;
+// }
 
 .no-touch .nl-form .nl-submit:hover,
 .no-touch .nl-form .nl-submit:active {
-	background: #69B1A9;
+	background: $formInputColor;
 }
 
 .no-touch .nl-form .nl-submit:hover:before {
-	background: #58a199;
+	background: $formInputColor;
 }
 
 /* overlay becomes visible when a field is opened */
