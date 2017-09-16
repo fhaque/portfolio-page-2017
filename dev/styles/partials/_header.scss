@@ -1,3 +1,9 @@
+.mainHeader {
+    @include respond-to("small-medium") {
+        min-height: 100vh;
+    }
+}
+
 .titleBar {
     display: flex;
     justify-content: space-between;
@@ -166,6 +172,10 @@
 
     min-height: remCalc(586px);
     padding-bottom: 156px;
+
+    @include respond-to("small-medium") {
+        padding-bottom: 0;
+    }
 }
 
 .introduction__content {
@@ -174,6 +184,10 @@
 
     @include respond-to("large") {
         max-width: 70%;
+    }
+
+    @include respond-to("small") {
+        max-width: 90%;
     }
 
     // @include respond-to("medium") {
