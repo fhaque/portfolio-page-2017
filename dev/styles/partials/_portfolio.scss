@@ -183,20 +183,20 @@
     color: $portfolioItemTextColor;
 }
 
+
 .devIcons__list {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 
     list-style-type: none;
+    
 
-    .portfolioGallery__item:nth-child(even) & {
-        // justify-content: flex-end;
-    }
+    // .portfolioGallery__item:nth-child(even) & {
+    //     // justify-content: flex-end;
+    // }
 }
 
-.devIcons__item {
-    font-size: 2rem;
-}
 
 .portfolioItemDisplay {
     // display: flex;

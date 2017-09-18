@@ -23,17 +23,22 @@
 }
 
 .titleBar__logo {
-    // width: remCalc(131px);
-    padding: 18px 32px;
+    // padding: 18px 32px;
+
+    padding: 18px 20px;
 
 
     text-align: center;
 
-    font-size: remCalc(19px);
-    font-weight: $medFontWeight;
-    letter-spacing: remCalc(6px);
+    font-family: $logoFont;
+    font-size: remCalc(30px);
+    // font-size: remCalc(19px);
+    // font-weight: $medFontWeight;
+    // letter-spacing: remCalc(6px);
+    letter-spacing: remCalc(10px);
     line-height: remCalc(19px);
-    text-transform: uppercase;
+    // text-transform: uppercase;
+    text-transform: lowercase;
     color: $secondaryColor;
     
     background-color: $logoBackgroundColor;

@@ -46,6 +46,7 @@
     }
 }
 
+
 .aboutInfoContent__topHeading {
     font-size: remCalc(12px);
     line-height: remCalc(12px);
@@ -73,6 +74,18 @@
     font-family: $secondaryFont;
     line-height: remCalc(28px);
     color: $contentTextColor;
+}
+
+.aboutInfoContent__descriptionHeading {
+    margin-top: 10px;
+
+    text-transform: uppercase;
+    font-family: $primaryFont;
+}
+
+.aboutInfoContent__iconsList {
+    justify-content: flex-start;
+    width: 80%;
 }
 
 .aboutInfoContent__readMoreLink {
