@@ -175,10 +175,27 @@
 }
 
 .portfolioItemInfo__description {
+    margin-bottom: 10px;
+    
     font-size: remCalc(12px);
     line-height: remCalc(24px);
     font-weight: $lightFontWeight;
     color: $portfolioItemTextColor;
+}
+
+.devIcons__list {
+    display: flex;
+    justify-content: space-between;
+
+    list-style-type: none;
+
+    .portfolioGallery__item:nth-child(even) & {
+        // justify-content: flex-end;
+    }
+}
+
+.devIcons__item {
+    font-size: 2rem;
 }
 
 .portfolioItemDisplay {
