@@ -1,3 +1,7 @@
+.contactSection {
+    padding-bottom: 100px;
+}
+
 .contactSection__container {
     display: flex;
     justify-content: center;
@@ -18,6 +22,7 @@
 }
 
 .contactSection__infoSubSection {
+    width: 33%;
 
     @include respond-to("medium") {
         display: flex;
@@ -27,6 +32,12 @@
         width: 80%;
         padding-top: 76px;
     }
+
+    // @include respond-to("small-medium") {
+    //     flex-direction: row;
+    //     flex-wrap: wrap;
+    // }
+
 }
 
 
@@ -57,11 +68,19 @@ form.contactForm .nl-submit-wrap {
         margin-bottom: 50px;
     }
 
+    @include respond-to("small-medium") {
+        width: 100%;
+    }
+
 }
 
 .socialMediaIcons {
     @include respond-to("medium") {
         width: 50%;
+    }
+
+    @include respond-to("small") {
+        width: 90%;
     }
 }
 
@@ -76,6 +95,11 @@ form.contactForm .nl-submit-wrap {
         justify-content: space-between;
     }
 
+    // @include respond-to("small-medium") {
+    //     justify-content: flex-start;
+    //     margin-bottom: 36px;
+    // }
+
 }
 
 .socialMediaIcons__item {
@@ -83,6 +107,12 @@ form.contactForm .nl-submit-wrap {
 
     &:first-child {
         margin-left: 0px;
+    }
+
+    @include respond-to("medium") {
+        &:first-child {
+            margin-left: 5px;
+        }
     }
 
 }
@@ -97,6 +127,10 @@ form.contactForm .nl-submit-wrap {
 
 .socialMediaIcons__item--github {
     background-color: #3f3f3f;
+}
+
+.socialMediaIcons__item--contact {
+    background-color: $contactIconShapeColor;
 }
 
 .socialMediaIcon__shape {
@@ -116,9 +150,26 @@ address.contactInfo {
 
         width: 100%;
     }
+
+    @include respond-to("small") {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    // @include respond-to("small-medium") {
+    //     flex-direction: column;
+    //     // align-items: center;
+    //     align-content: center;
+
+
+    // }
 }
 
 .contactInfo__item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
     margin-bottom: 50px;
 
     font-size: remCalc(13px);
@@ -132,9 +183,34 @@ address.contactInfo {
         margin-bottom: 0px;
     }
 
+    @include respond-to("medium") {
+        margin-bottom: 10px;
+
+        &:last-child {
+            margin-bottom: 10px;
+        }
+    }
+
+    @include respond-to("small-medium") {
+        flex-direction: column;
+    }
+
+    @include respond-to("small") {
+        margin: 10%;
+    }
+
 }
+
 .contactInfoIcon {
+    display: block;
     margin-right: 20px;
+
+    @include respond-to("small-medium") {
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    
 }
 
 
@@ -147,6 +223,12 @@ address.contactInfo {
     //need to use before element.
     &::before {
         color: $contactIconSymbolColor;
+    }
+}
+
+.contactInfo__itemText {
+    @include respond-to("small") {
+        display: none;
     }
 }
 

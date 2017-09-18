@@ -8,9 +8,22 @@ footer {
 
     width: 385px;
     margin: 0 auto;
+
+    @include respond-to("small") {
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 90%;
+    }
 }
 
 .footerNav__item a {
+    display: block;
+    padding: 20px;
+
     font-size: remCalc(14px);
     text-transform: none;
+
+    @include respond-to("small") {
+
+    }
 }
