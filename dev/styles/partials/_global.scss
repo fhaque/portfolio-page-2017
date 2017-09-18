@@ -1,5 +1,5 @@
 html {
-    font-size: $htmlFontSize;
+    font-size: $htmlFontSize * 1.15;
     font-family: $primaryFont;
 }
 
@@ -59,7 +59,8 @@ a {
 
     .aboutInfoContent__iconsList & {
         width: 20%;
-        margin-bottom: 10px;
+        max-width: 64px;
+        margin-bottom: 15px;
     }
 }
 

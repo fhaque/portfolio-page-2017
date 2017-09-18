@@ -221,7 +221,40 @@ nav.init = function() {
     });
 };
 
+var readMoreLink = {};
+readMoreLink.init = function() {
+    const $trigger = $('.aboutInfoContent__readMoreLink');
+    const $target = $('.aboutInfoContent__extraDescription');
+    
+    const $triggerText = $('.aboutInfoContent__readMoreLinkText');
+    const $bgBlock = $('.aboutInfoContent__readMoreLinkText::after');
+
+    const activeClass = 'aboutInfoContent__readMoreLinkText--active';
+
+    let triggered = false;
+
+    $trigger.on('click', function() {
+        $target.slideToggle(1000);
+
+        $triggerText.toggleClass(activeClass);
+       
+
+        triggered = !triggered;
+
+        if (triggered) {
+            $triggerText.text('Read Less');
+            console.log($bgBlock);   
+            $bgBlock.hide();
+        } else {
+            $triggerText.text('Read More');
+            $bgBlock.show();
+        }
+
+    });
+};
+
 $( function() {
     nav.init();
+    readMoreLink.init();
 
 });

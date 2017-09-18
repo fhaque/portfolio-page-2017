@@ -1,24 +1,30 @@
 @mixin respond-to($breakpoint) {
+    // @if $breakpoint == "small" {
+    //   @media (max-width: 485px) {
+    //     @content;
+    //   }
+    // }
+
     @if $breakpoint == "small" {
-      @media (max-width: 485px) {
+      @media (max-width: 600px) {
         @content;
       }
     }
-
-    @if $breakpoint == "small-medium" {
-      @media (max-width: 648px) {
+  
+    @else if $breakpoint == "small-medium" {
+      @media (max-width: 880px) { //768px
         @content;
       }
     }
   
     @else if $breakpoint == "medium" {
-      @media (max-width: 768px) {
+      @media (max-width: 940px) {
         @content;
       }
     }
-  
+
     @else if $breakpoint == "large" {
-      @media (max-width: 940px) {
+      @media (max-width: 1170px) {
         @content;
       }
     }

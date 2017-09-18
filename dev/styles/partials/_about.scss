@@ -76,8 +76,13 @@
     color: $contentTextColor;
 }
 
+.aboutInfoContent__extraDescription {
+    display: none;
+}
+
 .aboutInfoContent__descriptionHeading {
     margin-top: 10px;
+    margin-bottom: 10px;
 
     text-transform: uppercase;
     font-family: $primaryFont;
@@ -90,11 +95,19 @@
 
 .aboutInfoContent__readMoreLink {
     display: block;
+
+    border: none;
     
 
     font-size: remCalc(19px);
     line-height: remCalc(19px);
+    text-transform: uppercase;
 
+    background: transparent;
+
+    &:focus {
+        outline: none;
+    }
     
 }
 
@@ -118,5 +131,15 @@
         height: 30px;
 
         background-color: $linkBlockColor;
+
+        transition: all 1s;
+    }
+}
+
+.aboutInfoContent__readMoreLinkText--active {
+    &:after {
+        width: 120%;
+        height: 40px;
+        
     }
 }
