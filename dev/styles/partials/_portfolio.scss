@@ -34,6 +34,8 @@
 .portfolioItemInfo {
     display: flex;
 
+    z-index: $zOne;
+
     border: 10px solid $primaryColor;
     // flex-direction: column;
     // justify-content: flex-end;
@@ -199,6 +201,7 @@
 
 
 .portfolioItemDisplay {
+    position: relative;
     // display: flex;
     // justify-content: center;
     // align-items: center;
@@ -224,4 +227,36 @@
     display: block;
     width: 100%;
     height:auto;
+
+    filter: brightness(100%)
+            grayscale(90%);
+
+    transition: all 1s;
+
+    .portfolioItem:hover & {
+        filter: none;
+    }
+}
+
+.portfolioItemDisplay__overlay {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    // background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0.8) 100%);
+
+    background: linear-gradient(to bottom, rgba(198,198,198,0.6) 0%, rgba(198,198,198,0.9) 100%);
+
+    opacity: 1;
+    
+    transition: all 1s;
+
+    .portfolioItem:hover & {
+        // display: none;
+
+        opacity: 0;
+    }
 }

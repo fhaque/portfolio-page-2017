@@ -213,13 +213,35 @@ var nlform = new NLForm( document.getElementById( 'nl-form' ) );
 
 var nav = {};
 nav.init = function() {
+    nav.initBurger();
+    nav.initSmoothScroll();
+};
+
+nav.initSmoothScroll = function() {
+    const $navListLinks = $('.mainNav__list a');
+    $navListLinks.on('click',function(e) {
+        e.preventDefault();
+
+        const section = $(this).attr('href');
+
+        $('html, body').animate({
+            scrollTop: $(section).offset().top
+        }, 1000);
+
+    });
+}
+
+nav.initBurger = function() {
     const $burger = $('.mainNav__hamburger');
     const $navList = $('.mainNav__list');
 
-    $burger.on('click', function() {
-        $navList.toggleClass('mainNav__list--open');
+    $burger.on('click', function(e) {
+        e.preventDefault();
+
+        $navList.slideToggle(400);
+        // $navList.toggleClass('mainNav__list--open');
     });
-};
+}
 
 var readMoreLink = {};
 readMoreLink.init = function() {
@@ -233,7 +255,9 @@ readMoreLink.init = function() {
 
     let triggered = false;
 
-    $trigger.on('click', function() {
+    $trigger.on('click', function(e) {
+        e.preventDefault();
+
         $target.slideToggle(1000);
 
         $triggerText.toggleClass(activeClass);

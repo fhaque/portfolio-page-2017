@@ -91,6 +91,10 @@
 .aboutInfoContent__iconsList {
     justify-content: flex-start;
     width: 80%;
+
+    @include respond-to("medium") {
+        width: 90%;
+    }
 }
 
 .aboutInfoContent__readMoreLink {

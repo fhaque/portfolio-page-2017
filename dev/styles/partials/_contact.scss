@@ -145,6 +145,10 @@ form.contactForm .nl-submit-wrap {
 
 address.contactInfo {
     width: 90%;
+
+    @include respond-to("small") {
+        width: 95%;
+    }
 }
 
 .contactInfo__list {
@@ -153,11 +157,21 @@ address.contactInfo {
         justify-content: space-between;
 
         width: 100%;
+        margin: 0 auto;
+        
+    }
+
+    @include respond-to("small-medium") {
+        
+        width: 80%;
     }
 
     @include respond-to("small") {
         flex-wrap: wrap;
         justify-content: center;
+
+        width: 100%;
+
     }
 
     // @include respond-to("small-medium") {
