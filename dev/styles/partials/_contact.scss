@@ -37,11 +37,6 @@
         padding-top: 76px;
     }
 
-    // @include respond-to("small-medium") {
-    //     flex-direction: row;
-    //     flex-wrap: wrap;
-    // }
-
 }
 
 
@@ -99,10 +94,6 @@ form.contactForm .nl-submit-wrap {
         justify-content: space-between;
     }
 
-    // @include respond-to("small-medium") {
-    //     justify-content: flex-start;
-    //     margin-bottom: 36px;
-    // }
 
 }
 
@@ -188,13 +179,6 @@ address.contactInfo {
 
     }
 
-    // @include respond-to("small-medium") {
-    //     flex-direction: column;
-    //     // align-items: center;
-    //     align-content: center;
-
-
-    // }
 }
 
 .contactInfo__item {

@@ -1,3 +1,5 @@
+/*************** Natural Language Form ***************/
+//NL Form Credit: https://tympanus.net/Tutorials/NaturalLanguageForm/ 
 ;( function( window ) {
     
         'use strict';
@@ -211,6 +213,30 @@
 
 var nlform = new NLForm( document.getElementById( 'nl-form' ) );
 
+/*************** jQuery Modification ***************/
+
+//Credit to: https://stackoverflow.com/questions/20644029/checking-if-a-div-is-visible-within-viewport-using-jquery
+$.fn.isOnScreen = function(){
+    
+        var win = $(window);
+    
+        var viewport = {
+            top : win.scrollTop(),
+            left : win.scrollLeft()
+        };
+        viewport.right = viewport.left + win.width();
+        viewport.bottom = viewport.top + win.height();
+    
+        var bounds = this.offset();
+        bounds.right = bounds.left + this.outerWidth();
+        bounds.bottom = bounds.top + this.outerHeight();
+    
+        return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
+    
+    };
+
+/*************** Main Navigation Object ***************/
+
 var nav = {};
 nav.init = function() {
     nav.initBurger();
@@ -246,6 +272,8 @@ nav.initBurger = function() {
     });
 }
 
+/*************** Read More Functionality ***************/
+
 var readMoreLink = {};
 readMoreLink.init = function() {
     const $trigger = $('.aboutInfoContent__readMoreLink');
@@ -280,6 +308,8 @@ readMoreLink.init = function() {
     });
 };
 
+/*************** Tooltip Functionality ***************/
+
 var toolTip = {};
 toolTip.init = function() {
     const $trigger = $('.devIcons__item');
@@ -307,6 +337,7 @@ toolTip.createElement = function(value) {
                 .text(value);
 };
 
+/*************** Typewriter Animation ***************/
 
 // Credit to: https://codepen.io/designcouch/pen/Atyop
 var typeWriter = {};
@@ -335,8 +366,22 @@ typeWriter.typeWrite = function(span, baseRate, minRateDelta, maxRateDelta) {
 
 };
 
+/*************** Typing out Contact area ***************/
+var contactFormEndType = { contactEndhasTyped: false };
+
+contactFormEndType.init = function() {
+    
+    $(window).scroll(function() {
+        if ($('#nl-form').isOnScreen() == true && !contactFormEndType.contactEndhasTyped ) {
+            typeWriter.typeWrite('typeContactEnd', 7000, 500, 800);
+            contactFormEndType.contactEndhasTyped = true;
+        }
+        
+    });
+}
 
 
+/*************** On Window Initialization ***************/
 
 
 $( function() {
@@ -346,5 +391,8 @@ $( function() {
     toolTip.init();
 
     typeWriter.typeWrite('greetingHeader', 7000, 500, 800);
+
+    contactFormEndType.init();
+    
 
 });

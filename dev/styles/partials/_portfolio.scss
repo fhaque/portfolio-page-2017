@@ -33,23 +33,17 @@
 
 .portfolioItemInfo {
     display: flex;
-
-    z-index: $zOne;
-
-    border: 10px solid $primaryColor;
-    // flex-direction: column;
-    // justify-content: flex-end;
-    
-
     justify-content: center;
     align-items: center;
 
-    width: pOfWrapper(370px);
+    z-index: $zOne;
 
+    width: pOfWrapper(370px);
+    border: 10px solid $primaryColor;
+    
     @include respond-to("medium") {
-        // flex: 1.18;
         flex: 1.4;
-        // width: 40%;
+
         .portfolioGallery__item:nth-child(odd) & {
             margin-left: 0%;
             margin-right: 2%;
@@ -106,10 +100,6 @@
         
     }
 
-
-    
-
-    // padding: 110px 50px;
 }
 
 .portfolioItemInfo__content {
@@ -142,23 +132,6 @@
     letter-spacing: 0;
     color: $portfolioIconColor;
 
-    // @include respond-to("small-medium") {
-    //     position: absolute;
-
-    //     .portfolioGallery__item:nth-child(odd) & {
-    //         top: 0;
-    //         right: 0;
-    //         transform: translate(-40%,10%);
-    //     }
-
-    //     .portfolioGallery__item:nth-child(even) & {
-    //         top: 0;
-    //         left: 0;
-    //         transform: translate(40%,20%);
-    //     }
-
-        
-    // }
 }
 
 .portfolioItemInfo__heading {
@@ -193,28 +166,25 @@
 
     list-style-type: none;
     
-
-    // .portfolioGallery__item:nth-child(even) & {
-    //     // justify-content: flex-end;
-    // }
 }
 
 
+a.portfolioItemDisplay {
+    transform: none;
+}
+
 .portfolioItemDisplay {
     position: relative;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
 
     width: pOfWrapper(770px);
 
-    // overflow: hidden;
 
     background-color: black;
 
+    overflow: hidden; //Chrome browser bug (to avoid 1px right border issue)
+    //see .portfolioItemDisplay img for additional fix
+
     @include respond-to("medium") {
-        // width: calc(60% - 30px); //30px: margin
-        // padding: 0 5%;
         flex: 1.758;
     }
 
@@ -225,17 +195,21 @@
 
 .portfolioItemDisplay img {
     display: block;
-    width: 100%;
+    width: calc(100% + 1px); //Chrome browser bug fix to eliminate right border.
     height:auto;
 
-    filter: brightness(100%)
+    filter: brightness(150%)
             grayscale(90%);
 
     transition: all 1s;
 
-    .portfolioItem:hover & {
-        filter: none;
-    }
+    
+
+    
+}
+
+.portfolioItemDisplay:hover img {
+    filter: none;
 }
 
 .portfolioItemDisplay__overlay {
@@ -244,19 +218,17 @@
     top: 0;
     left: 0;
     bottom: 0;
-    right: 0;
+    right: -1px;
+    
 
-    // background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0.8) 100%);
-
-    background: linear-gradient(to bottom, rgba(198,198,198,0.6) 0%, rgba(198,198,198,0.9) 100%);
-
+    background: linear-gradient(to bottom, rgba(255, 94, 98, 0.15), rgba(255, 153, 102, 0.6));
+    
     opacity: 1;
     
     transition: all 1s;
 
-    .portfolioItem:hover & {
-        // display: none;
-
+    .portfolioItemDisplay:hover & {
         opacity: 0;
     }
+
 }

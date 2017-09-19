@@ -23,7 +23,6 @@
 }
 
 .titleBar__logo {
-    // padding: 18px 32px;
 
     padding: 18px 20px;
 
@@ -32,12 +31,9 @@
 
     font-family: $logoFont;
     font-size: remCalc(30px);
-    // font-size: remCalc(19px);
-    // font-weight: $medFontWeight;
-    // letter-spacing: remCalc(6px);
+
     letter-spacing: remCalc(10px);
     line-height: remCalc(19px);
-    // text-transform: uppercase;
     text-transform: lowercase;
     color: $secondaryColor;
     
@@ -55,13 +51,11 @@
     
 
     @include respond-to("small-medium") {
-        // position: fixed;
         margin-right: 38px;
         width: 45%;
     }
 
     @include respond-to("small") {
-        // position: fixed;
         width: 10%;
         margin-right: 15px;
         
@@ -69,10 +63,7 @@
 }
 
 .mainNav__container {
-    // // display: flex;
-    // // flex-direction: column;
-    // // justify-content: center;
-    // position: relative;
+
     @include respond-to("small") {
         display: flex;
         flex-direction: column;
@@ -80,23 +71,10 @@
         align-items: flex-end;
     }
     
-
-    // @include respond-to("small-medium") {
-    //     align-items: flex-end;
-    //     position: fixed;
-
-    //     width: 30%;
-    //     right: 32px;
-
-    //     margin-right: 0;
-    // }
 }
 
 .mainNav__hamburger {
     display: none;
-
-    // position: fixed;
-    // right: 32px;
 
     z-index: $zFront;
 
@@ -116,7 +94,6 @@
 
     @include respond-to("small") {
         display: block;
-        // position: fixed;
     }
 }
 
@@ -130,31 +107,18 @@
     justify-content: space-between;
 
     @include respond-to("small") {
-        // display: none;
+
         flex-direction: column;
         position: absolute;
         top: 57px;
         right: -100px;
         opacity: 0;
 
-        // padding-top: 10px;
-        // padding-left: 20px;
-        // padding-right: 20px;
-
         background-color: $secondaryColor;
 
         transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
     }
 
-
-
-    // @include respond-to("small-medium") {
-    //     // display: none;
-    //     flex-direction: column;
-    //     // position: fixed;
-
-    //     margin-top: 10px;
-    // }
 }
 
 .mainNav__list--open {
@@ -166,9 +130,6 @@
     }
 }
 
-// .mainNav__list--open {
-//     position: fixed;
-// }
 
 .mainNav__item {
     @include respond-to("small") {
@@ -200,7 +161,7 @@
 }
 
 .introduction__content {
-    // width: pOfWrapper(560px);
+
     max-width: 560px;
 
     @include respond-to("large") {
@@ -211,9 +172,6 @@
         max-width: 90%;
     }
 
-    // @include respond-to("medium") {
-    //     max-width: 70%;
-    // }
 }
 
 .introduction__topHeading {

@@ -15,8 +15,6 @@
     overflow: hidden;
 
     width: pOfWrapper(575px);
-    
-    // background-color: $primaryColor;
 
     @include respond-to("small-medium") {
         width: 100%;
@@ -26,17 +24,12 @@
 .aboutInfo__display img {
     display: block;
     width: 100%;
-    // max-height: 100%;
-    // min-width: 100%;
-    // min-height: 100%;
-    // min-height: 100%;
 }
 
 .aboutInfo__content {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    // align-items: center;
 
     width: pOfWrapper(520px);
 
