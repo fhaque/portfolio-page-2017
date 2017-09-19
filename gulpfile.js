@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const sourcemaps = require('gulp-sourcemaps');
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
+const autoprefixer = require('gulp-autoprefixer');
 const babel = require('gulp-babel');
 const plumber = require('gulp-plumber');
 const imagemin = require('gulp-imagemin');
@@ -13,6 +14,9 @@ gulp.task('styles', function() {
     return gulp .src('./dev/styles/**/*.scss')
                 .pipe(sourcemaps.init())
                 .pipe( sass().on('error', sass.logError) )
+                .pipe(autoprefixer({
+                    browsers: ['last 2 versions']
+                }))
                 .pipe( concat('style.css') )
                 .pipe(sourcemaps.write('./') )
                 .pipe( gulp.dest('./public/styles/') )
