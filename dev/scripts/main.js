@@ -253,8 +253,35 @@ readMoreLink.init = function() {
     });
 };
 
+var toolTip = {};
+toolTip.init = function() {
+    const $trigger = $('.devIcons__item');
+
+    $trigger.hover(toolTip.handleMouseEnter, toolTip.handleMouseLeave);
+
+    toolTip.createElement();
+};
+
+toolTip.handleMouseEnter = function() {
+    const value = $(this).data('value');
+
+    $(this).append( toolTip.createElement(value) );
+};
+
+toolTip.handleMouseLeave = function() {
+    $(this).children('.devIcon__toolTip').remove();
+};
+
+toolTip.createElement = function(value) {
+    return $('<div>')
+                .addClass('devIcon__toolTip')
+                .text(value);
+};
+
 $( function() {
     nav.init();
     readMoreLink.init();
+
+    toolTip.init();
 
 });
