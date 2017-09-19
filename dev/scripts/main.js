@@ -234,12 +234,15 @@ nav.initSmoothScroll = function() {
 nav.initBurger = function() {
     const $burger = $('.mainNav__hamburger');
     const $navList = $('.mainNav__list');
+    const active = 'mainNav__hamburger--active';
 
     $burger.on('click', function(e) {
         e.preventDefault();
 
-        $navList.slideToggle(400);
-        // $navList.toggleClass('mainNav__list--open');
+        $burger.toggleClass(active);
+
+        // $navList.slideToggle(400);
+        $navList.toggleClass('mainNav__list--open');
     });
 }
 
@@ -289,7 +292,9 @@ toolTip.init = function() {
 toolTip.handleMouseEnter = function() {
     const value = $(this).data('value');
 
-    $(this).append( toolTip.createElement(value) );
+    if (value !== undefined && value !== '') {
+        $(this).append( toolTip.createElement(value) );
+    }
 };
 
 toolTip.handleMouseLeave = function() {
@@ -302,10 +307,44 @@ toolTip.createElement = function(value) {
                 .text(value);
 };
 
+
+// Credit to: https://codepen.io/designcouch/pen/Atyop
+var typeWriter = {};
+
+typeWriter.randomIntFromInterval = function(min,max) {
+    return Math.floor(Math.random()*(max-min+1)+min);
+};
+
+
+typeWriter.typeWrite = function(span, baseRate, minRateDelta, maxRateDelta) {
+    $('#'+span).addClass('cursor');
+
+    var text = $('#'+span).text();
+    var randInt = 0;
+
+    for (var i = 0; i < text.length; i++) {
+        randInt += parseInt(typeWriter.randomIntFromInterval(minRateDelta,maxRateDelta));
+        var typing = setTimeout(function(y){
+        $('#'+span).append(text.charAt(y));
+        },randInt, i);
+    };
+
+    setTimeout(function(){
+        $('#'+span).removeClass('cursor');
+    }, randInt+baseRate);
+
+};
+
+
+
+
+
 $( function() {
     nav.init();
     readMoreLink.init();
 
     toolTip.init();
+
+    typeWriter.typeWrite('greetingHeader', 7000, 500, 800);
 
 });

@@ -18,7 +18,7 @@
             <div class="titleBar wrapper">
                 <h1 class="titleBar__logo">&#60;Fatin&#47;&#62;</h1>
                 <nav class="mainNav titleBar__nav">
-                    <div class="mainNav__container">
+                    <div  class="mainNav__container">
                         <button class="mainNav__hamburger">
                             <i class="fa fa-bars" aria-hidden="true"></i>
                         </button>
@@ -33,8 +33,8 @@
                 <div class="introduction">
                     <div class="introduction__content">
                         <div class="introduction__header">
-                            <p class="introduction__topHeading">Hello</p>
-                            <h2 class="introduction__heading">I'm Fatin Haque</h2>
+                            <p id="greetingHeader" class="introduction__topHeading"><noscript>Hello</noscript></p>
+                            <h2 id="" class="introduction__heading">I'm Fatin Haque</h2>
                         </div>
                         <p class="introduction__description">I'm also a Web Developer, Physicist and Engineer. Check out my work below! </p>
                     </div>
@@ -277,18 +277,18 @@
                 <h2 class="section__heading">Contact me</h2>
             <div class="contactSection__container">
                 <section class="contactSection__formSubSection">
-                    <form id="nl-form" class="nl-form contactForm">
+                    <form id="nl-form" class="nl-form contactForm" action="https://formspree.io/frhaque@gmail.com">
                         Hi Fatin,
                         <br />
                         <br />
                         I'm 
-                        <input type="text" value="" placeholder="name" data-subline="For example: <em>Linda</em> or <em>Scott</em>"/> 
+                        <input type="text" name="name" value="" placeholder="name" data-subline="For example: <em>Linda</em> or <em>Scott</em>"/> 
                         and I'd like to discuss about
-                        <input type="text" value="" placeholder="subject" data-subline="For example: <em>your work</em> or <em>meeting up</em>"/> 
+                        <input type="text" name="subject" value="" placeholder="subject" data-subline="For example: <em>your work</em> or <em>meeting up</em>"/> 
                         . You can reach me by 
-                        <input type="text" value="" placeholder="my email" data-subline="For example: <em>linda@fakeemail.com</em> or <em>scott@anotheremail.ca</em>"/> 
+                        <input type="text" name="email" value="" placeholder="my email" data-subline="For example: <em>linda@fakeemail.com</em> or <em>scott@anotheremail.ca</em>"/> 
                         or
-                        <input type="text" value="" placeholder="my phone number" data-subline="For example: <em>(519)555-5555</em> or <em>1-416-555-5555</em>"/>
+                        <input type="text" name="phone" value="" placeholder="my phone number" data-subline="For example: <em>(519)555-5555</em> or <em>1-416-555-5555</em>"/>
                         .
         
                         <div class="nl-submit-wrap">
@@ -331,19 +331,22 @@
                     <address class="contactInfo">
                         <ul class="contactInfo__list">
                             <li class="contactInfo__item contactInfo__item--phone">
-                                <span class="fa-stack fa-2x contactInfoIcon js-contactInfoIcon">
-                                    <i class="fa fa-circle fa-stack-2x contactInfoIcon__shape js-contactInfoIcon__shape"></i>
-                                    <i class="fa fa-phone fa-stack-1x fa-inverse contactInfoIcon__symbol js-contactInfoIcon__symbol"></i>
-                                </span>
+                                <a href="tel:519-729-6390">
+                                    <span class="fa-stack fa-2x contactInfoIcon js-contactInfoIcon">
+                                        <i class="fa fa-circle fa-stack-2x contactInfoIcon__shape js-contactInfoIcon__shape"></i>
+                                        <i class="fa fa-phone fa-stack-1x fa-inverse contactInfoIcon__symbol js-contactInfoIcon__symbol"></i>
+                                    </span>
+                                </a>
                                   <p class="contactInfo__itemText">+1-(519)729-6390</p>
                             </li>
                             <li class="contactInfo__item contactInfo__item--email">
-                                <span class="fa-stack fa-2x contactInfoIcon js-contactInfoIcon">
-                                    <i class="fa fa-circle fa-stack-2x contactInfoIcon__shape js-contactInfoIcon__shape"></i>
-                                    <i class="fa fa-envelope fa-stack-1x fa-inverse contactInfoIcon__symbol js-contactInfoIcon__symbol"></i>
-                                </span>
-                                
-                                <p class="contactInfo__itemText">fhaque@uwaterloo.ca</p>
+                                <a href="mailto:frhaque@gmail.com">
+                                    <span class="fa-stack fa-2x contactInfoIcon js-contactInfoIcon">
+                                        <i class="fa fa-circle fa-stack-2x contactInfoIcon__shape js-contactInfoIcon__shape"></i>
+                                        <i class="fa fa-envelope fa-stack-1x fa-inverse contactInfoIcon__symbol js-contactInfoIcon__symbol"></i>
+                                    </span>
+                                </a>
+                                <p class="contactInfo__itemText">frhaque@gmail.com</p>
                             </li>
                         </ul>
                     </address>

@@ -113,12 +113,20 @@ form.contactForm .nl-submit-wrap {
         margin-left: 0px;
     }
 
+    &:hover {
+        background-color: $linkBlockColor;
+    }
+
     @include respond-to("medium") {
         &:first-child {
             margin-left: 5px;
         }
     }
 
+}
+
+.socialMediaIcons__item a {
+    display: block;
 }
 
 .socialMediaIcons__item--twitter {
@@ -135,6 +143,12 @@ form.contactForm .nl-submit-wrap {
 
 .socialMediaIcons__item--contact {
     background-color: $contactIconShapeColor;
+}
+
+.socialMediaIcon__symbol {
+    .socialMediaIcons__item a:hover & {
+        color: $primaryColor;
+    }
 }
 
 .socialMediaIcon__shape {

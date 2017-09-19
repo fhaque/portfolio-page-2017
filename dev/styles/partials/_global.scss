@@ -30,6 +30,13 @@ a {
     &:active,
     &:hover {
         color: $linkBlockColor;
+        transform: scale(0.95,0.95);
+    }
+}
+
+button {
+    &:hover {
+        transform: scale(0.95, 0.95);
     }
 }
 
@@ -98,4 +105,29 @@ a {
 
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 
+}
+
+
+.cursor:after {
+    content:"_";
+    opacity: 0;
+    animation: cursor 1s infinite;
+}
+
+@keyframes cursor {
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }

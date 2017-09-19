@@ -100,7 +100,7 @@
 
     z-index: $zFront;
 
-    max-width: 44px;
+    max-width: 50px;
     padding: 10px 14px;
 
     text-align: center;
@@ -120,22 +120,30 @@
     }
 }
 
+.mainNav__hamburger--active {
+    color: $primaryColor;
+    background-color: $linkBlockColor;
+}
+
 .mainNav__list {
     display: flex;
     justify-content: space-between;
 
     @include respond-to("small") {
-        display: none;
+        // display: none;
         flex-direction: column;
         position: absolute;
         top: 57px;
-        right: 0;
+        right: -100px;
+        opacity: 0;
 
         // padding-top: 10px;
         // padding-left: 20px;
         // padding-right: 20px;
 
         background-color: $secondaryColor;
+
+        transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
     }
 
 
@@ -151,7 +159,10 @@
 
 .mainNav__list--open {
     @include respond-to("small") {
-        display: block;
+        display: initial;
+        right: 0;
+        opacity: 1;
+        transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
     }
 }
 
