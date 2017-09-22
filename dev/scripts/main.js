@@ -376,9 +376,28 @@ contactFormEndType.init = function() {
             typeWriter.typeWrite('typeContactEnd', 7000, 500, 800);
             contactFormEndType.contactEndhasTyped = true;
         }
+
+        
         
     });
 }
+
+/*************** Typing out Footer area ***************/
+var footerType = { footerHasTyped: false };
+
+footerType.init = function() {
+    
+    $(window).scroll(function() {
+        if ($('footer').isOnScreen() == true && !footerType.footerHasTyped ) {
+            typeWriter.typeWrite('typeFooter', 1000, 10, 300);
+            footerType.footerHasTyped = true;
+        }
+
+        
+        
+    });
+}
+
 
 
 /*************** On Window Initialization ***************/
@@ -393,6 +412,8 @@ $( function() {
     typeWriter.typeWrite('greetingHeader', 7000, 500, 800);
 
     contactFormEndType.init();
+
+    footerType.init();
     
 
 });

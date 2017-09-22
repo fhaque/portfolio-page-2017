@@ -170,6 +170,10 @@
 
 
 a.portfolioItemDisplay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     transform: none;
 }
 
@@ -179,7 +183,7 @@ a.portfolioItemDisplay {
     width: pOfWrapper(770px);
 
 
-    background-color: black;
+    // background-color: black;
 
     overflow: hidden; //Chrome browser bug (to avoid 1px right border issue)
     //see .portfolioItemDisplay img for additional fix
